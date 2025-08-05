@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Ideas | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h1>Project Idea Journal</h1>
+    <p> Let me know if you want to build any of these with me! email- aeliyag@uchicago.edu</p>
+    <p> FillUp- Wellness-Diet-Exercise-Sleep Tracker that tracks workout plans, diet, sleep <br/> in order to recommend beter future workout plans and diet, and give better reminders for medication</p>
+
+    <p> UChicago Grades Tracker - A easy way to track and update grades in Canvas for grade addictive uchicago students</p>
+
+    <p> Weather app that can recommend you outfits what to wear that actually match weather forcasts and help with latest fashion tips</p>
+
+    <p> A plug in to remove instagram reels (victim of too many doom scrolls) </p>
+    <p> Photo taking recommender app that helps guide novice iphone photographers to take better photos </p>
+    <p> Financial visualizer app to help track short and long term finances</p>
+  </main>
+
+
+
+
+
+  <div id="footer"></div>
+</body>
+</html>

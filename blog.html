@@ -14,10 +14,24 @@
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
   </script>
+  <main>
+    <h1>Blog</h1>
+    <p>Here's where I share updates, ideas, and learning experiences.</p>
+    <div class = "link">
+        <a href="blogpost1.html"> Week of August 3rd</a>
+    </div>
+  </main>
 
 
-  <h1>Blog</h1>
-  <p>Here's where I share updates, ideas, and learning experiences.</p>
+
+
+
+  <div id="footer"></div>
 </body>
 </html>

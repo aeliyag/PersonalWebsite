@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Health | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h1>Health and Wellness</h1>
+    <p>Core pillars for wellness: Sleep, Diet, Exercise, Social </p>
+
+    <p>Resources:</p>
+    <div class="link">
+        <a href="https://www.bryanjohnson.com/">diet </a>
+    </div>
+    <div class="link">
+        <a href="https://www.youtube.com/watch?v=BlJwMNgNwdw&ab_channel=SunilGrover">the man the myth the legend</a>
+    </div>
+    <div class="link">
+        <a href="https://youtu.be/JCTb3QSrGMQ?si=9fUSN3q_UFVwF4MG"> good summary </a>
+
+    </div>
+       
+
+  </main>
+
+
+
+
+
+  <div id="footer"></div>
+</body>
+</html>

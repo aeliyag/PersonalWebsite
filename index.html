@@ -14,14 +14,27 @@
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
     });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
   </script>
 
   
+  <main>
+    <h1>Welcome!</h1>
+    <p>Hi! I'm Aeliya a 2nd year at UChicago studying Computer Science and Economics. <br/>
+        I'm currently an assistant project manager at Akool! Check out some of my projects...</p>
+    <div class= "link">
+        <a href = "https://akool.com/">Akool</a>
+    </div>
+    <div class = "link">
+        <a href="projects.html">See all projects</a>
+    </div>
 
-  <h1>Welcome!</h1>
-  <p>Hi, I'm Aeliya. Check out some of my projects...</p>
-  <div class = "link">
-    <a href="projects.html">See all projects</a>
-  </div>
+  </main>
+  
+  <div id="footer"></div>
 </body>
 </html>

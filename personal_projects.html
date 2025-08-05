@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Projects | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main> 
+    <h1>Personal projects</h1>
+    <p>larger long term projects - smaller projects will be posted in blogs </p>
+    <div class="link">
+        <a href="blog.html"> Check out blog journal posts here!</a>
+
+    </div>
+    <h2>Summer!</h2>
+    <p> Team Project 1: HandsIn </p>
+    <p> ASL learning platoform that uses live webcam to track movements</p>
+    <div class="link">
+        <a href="https://www.handsinlearning.co/"> site</a>
+    </div>
+    <p>Current status (aug 4th): applying to incubators, finding and talking to mentors, working on full stack dev of MVP</p>
+    <p> Individual Project 2: CV Drone </p>
+    <div class = "link"> 
+        <img src="IMG_0273.png" alt="drone" width = 300 height = 300>
+    </div>
+    <p>Current status (aug 4): Motors aren't turning...highly suspect its because of battery charge</p>
+    <p>Project 3: Informational Interviews </p>
+    <p>learning about career paths, advice</p>
+    <div class= "link">
+        <a href="advice.html">notes</a>
+    </div>
+    <p> Team Project 4: Fear Elemental Studios</p>
+    <p> Implementing decision trees for Ai enemies</p>
+    <p> Status (Aug 4th): implemented simple ai based on youtube videos. currently taking a break to focus on HandsIn. will resume in Fall</p>
+
+    <p> Upcoming: August 9th - Hackathon w Grace Janusz product tbd</p>
+    <p> Upcoming: August 15-August 28th - Hackathon w brother product - a music feedback system to help with instrument practicing</p>
+    <h2>1st year</h2>
+    <p> Team project 1: Twisted Prison </p>
+    <p>A 3D Rubik’s Cube-style prison escape game where 3 players (prisoners) try to collect keys on different sides of the cube while evading the 1 warden (controlling two board pieces). The twist? The cube rotates randomly—helping or hindering either side depending on their luck and positioning.</p>
+    <div class="link">
+        <a href="https://docs.google.com/document/d/1c7QN_wLGMvJZk2w9v0ugr--30xdLcmqnAO11GNJUOMc/edit?usp=sharing">Project Game Mechanics Build Journal | </a>
+        <a href="https://docs.google.com/document/d/1eWARjhWH7FZWjTjy9Irzxad_yhN0zSeXvCXgcLXLRo0/edit?usp=sharing">Game Rules | </a>
+        <a href="https://www.youtube.com/watch?v=7bKREtT43zw&feature=youtu.be">TUI Demo | </a>
+        <a href="https://github.com/aeliyag/TwistedPrisonTui">GitHub</a>
+
+    </div>
+
+    <p> Team project 2: Retro Boomin</p>
+    <p> retro-style mini-games with Pygame connected to breadboard joystick - Won Best in Track at Uncommon Hacks </p>
+    <div class ="link"> 
+        <a href="https://devpost.com/software/retro-boomin-9przm2"> Devpost</a>
+    </div>
+
+    <p> Team project 3: HandsIN</p>
+    <p> Focused on the business model plan of HandsIn for the ILC 100 Days Pitch comptition - Won 1st place </p>
+    <div class ="link">
+        <a href="https://drive.google.com/file/d/19wD94GbtKhN_ErQ5ZlN4vfRIpkJaG0Rt/view?usp=sharing"> Pitch Deck</a>
+    </div>
+
+    <p> Team projcet 4: otto's adventure</p>
+    <p>First game jam - anti rpg of otto who gets stuck in the tutorial</p>
+    <div class ="link"> 
+        <a href="https://backyardigans-studios.itch.io/otto"> Itch Page</a>
+
+    </div>
+    
+</main>
+
+  <div id="footer"></div>
+</body>
+</html>

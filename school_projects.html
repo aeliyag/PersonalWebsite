@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Projects | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main> 
+    <h1>School Projects</h1>
+    <p>College classes: </p>
+    <div class = "link"> 
+        <li> CS141-143</li>
+        <li> Introduction to mathematical fondations of machine learning</li>
+    </div>
+
+
+    <p> High School</p>
+    <div class="link"> 
+        <li>Built n-layer neural network from scratch</li>
+        <a href="https://github.com/aeliyag/NeuralNetworks"> github</a>
+        
+
+    </div>
+    <div class="link"> 
+        <li>Built first part of pascal compiler</li>
+        <a href="https://github.com/aeliyag/Compilers"> github</a>
+
+    </div>
+
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

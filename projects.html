@@ -14,18 +14,32 @@
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
     });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
   </script>
   
+  <main> 
+    <h1>Projects</h1>
+    <div>
+      <p>Where I like to spend most of my time...</p>
+    </div>
+  
+    <h2>Personal Projects</h2>
+    <div class = "link">
+      <a href="personal_projects.html">here</a>
+    </div>
+  
+    <h2>School Projects</h2>
+    <div class = "link">
+      <a href="school_projects.html">here</a>
+    </div>
 
-  <h1>Projects</h1>
-  <div>
-    <p>Where I like to spend most of my time...</p>
-</div>
-  <h2>Personal Projects</h2>
-  <ul><li>Project 1</li></ul>
-  <h2>School Projects</h2>
-  <ul><li>Project A</li></ul>
-  <h2>Team Projects</h2>
-  <ul><li>Project X</li></ul>
+    
+  </main>
+  <div id="footer"></div>
+ 
 </body>
 </html>

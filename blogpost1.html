@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Projects | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main> 
+    <h1>Week of August 3rd </h1>
+    <p> August 4th - </p>
+    <div class="link">
+        <li> Learned google is banned in china rn(!?)</li>
+        <li>Learned that my friends and I got a woodlawn apartment!</li>
+        <li> Built a simple expense splitter spreadsheet for roommates</li>
+        <a href="https://docs.google.com/spreadsheets/d/1GPi8wFikzCrTsges0jdgX2gFnEAtejYbG1-NbHGw56g/edit?usp=sharing"> try here</a>
+        <li>Next step will be to implement some kind of guest split policy to pay for food / drink when guests come over</li>
+        <li> Started work on this personal website! </li>
+        <li>Update: ended up staying up past my bed time to finish draft of website :( am understanding why programmers get bad sleep..working on interesting stuff is exciting</li>
+        
+    </div>
+    <p> August 3rd - </p>
+    <div class="link">
+        <li>YC and SPC Founder Fellowship App for HandsIn submited</li>
+
+    </div>
+
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

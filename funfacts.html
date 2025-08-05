@@ -14,13 +14,47 @@
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
   </script>
-  
-  <h1>Fun Facts About Me</h1>
-  <ul>
-    <li>I listened to taylor swift reputation while making this website</li>
-    <li>Fitness and health is very important to me!</li>
-    <li>I have a dog, bunny, and bird</li>
-  </ul>
+  <main>
+    <h1>Fun Facts About Me</h1>
+
+    <ul>
+      <li>I usually wake up at 6:40 on weekdays</li>
+      <li>Fitness and health is very important to me!</li>
+      <div class="link">
+          <a href="health.html">learn more here</a>
+
+      </div>
+      <li>I have a dog, bunny, and bird</li>
+      <li>learning how to play hotel california on guitar!</li>
+      <li> I play on the Uchicago women's rugby team!</li>
+    </ul>
+
+    <h2> Current Software obsessions</h2>
+    <p>Same </p>
+    <div class ="link">
+        <a href="https://same.new/">Try here</a>
+    </div>
+
+    <h2> Current Favorite songs</h2>
+    <p>Heart of Gold by Shawn Mendes</p>
+    <p>Mess by Noah Kahan</p>
+    <p>Suburbs by Good Neighbor</p>
+
+    <div class="link"> 
+        <a href="ideajournal.html"> idea journal</a>
+
+    </div>
+
+
+
+  </main>
+ 
+  <div id="footer"></div>
 </body>
 </html>
