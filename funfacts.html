@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Fun Facts | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+  </script>
+  
+  <h1>Fun Facts About Me</h1>
+  <ul>
+    <li>I listened to taylor swift reputation while making this website</li>
+    <li>Fitness and health is very important to me!</li>
+    <li>I have a dog, bunny, and bird</li>
+  </ul>
+</body>
+</html>

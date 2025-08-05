@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Projects | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+  </script>
+  
+
+  <h1>Projects</h1>
+  <div>
+    <p>Where I like to spend most of my time...</p>
+</div>
+  <h2>Personal Projects</h2>
+  <ul><li>Project 1</li></ul>
+  <h2>School Projects</h2>
+  <ul><li>Project A</li></ul>
+  <h2>Team Projects</h2>
+  <ul><li>Project X</li></ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Blog | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+  </script>
+
+
+  <h1>Blog</h1>
+  <p>Here's where I share updates, ideas, and learning experiences.</p>
+</body>
+</html>

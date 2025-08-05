@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Home | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+  </script>
+
+  
+
+  <h1>Welcome!</h1>
+  <p>Hi, I'm Aeliya. Check out some of my projects...</p>
+  <div class = "link">
+    <a href="projects.html">See all projects</a>
+  </div>
+</body>
+</html>
