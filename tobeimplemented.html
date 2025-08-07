@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>To be implemented | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h1>Things I need to work on...</h1>
+    <p>  - structure of Html files</p>
+    <p> - Add more description of projects</p>
+    <p> - Make design nicer so traffic flows to personal projects </p>
+    <p> - create a newsletter sign up option for people to get updates (immediate, biweekly, quarterly, yearly) based on their preference </p>
+    <p> - add buttons instead of links, create flow so that traffic can easily or is guided through entire site without them even knowing :D</p>
+  
+</main>
+
+
+
+
+
+  <div id="footer"></div>
+</body>
+</html>

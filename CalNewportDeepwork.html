@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Deep WOrk  | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h1>Notes</h1>
+    <p> Theres Deep and Shallow Work...Deep work requires focus and creates learning and progress, Shallow work distracts</p>
+    <p> Theres so much noise in the world. Deep Work requires you to ignore this noise</p>
+    <p> You want to be part of one of the three: Being the best at a specalization, being efficeint with working with technology (ex. ChatGpt), have capital</p>
+    <p> High-Quality work produced = (Time Spent) x (Intensity of Focus) </p>
+    <p> August 6th - Am noticing the effect of notifications and messages and its intensity with distrupting flow. Plan right now to fix this is to keep focus and notifications off but get into a habit of checking proper messaging at given times of the day. By removing notication I should be removing the immediate need or desire to repsond to these messages helping me mainting my deep work.</p>
+ </main>
+
+
+
+
+
+  <div id="footer"></div>
+</body>
+</html>
