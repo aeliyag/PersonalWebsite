@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Projects | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main>
+      <h1> Week of August 10-16th</h1>
+      <p><b>August 11th</b></p>
+      <p> Returning to Drone project -> motors can now turn but only during esc calibration. After I unplug battery and try to restart, motor turning fails. Email sent to drone help email. Was also late at night and didn't want to test outside yet so unsure if drone actually flies / hovers </p>
+      <p> updated website and added poetry folder under fun facts </p>
+      <div class = "center"> 
+        <video width="320" height="240" controls>
+            <source src="drone_video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+  
+        </video>
+      </div>
+      
+
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Poems | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+
+    <h2> I'm Nobody! Who are you?</h2>
+    <p> Emily Dickinson</p>
+    <p>
+        I’m Nobody! Who are you? <br>
+        Are you – Nobody – too?<br>
+        Then there’s a pair of us!<br>
+        Don’t tell! they’d advertise – you know!<br><br>
+
+        How dreary – to be – Somebody!<br>
+        How public – like a Frog –<br>
+        To tell one’s name – the livelong June –<br>
+        To an admiring Bog!<br>
+    </p>
+    <p> Interpretation:</p>
+    <p> This poem speaks to the dangers of publicity</p>
+    <p> When you're no one, there are no expectations, no attention, no one to please, less pressure to perform, freedom to create</p>
+
+
+    <h2> Wish you were here</h2>
+    <p> Pink Floyd</p>
+    <p> Static radio: </p>
+    <p> And disciplinary remains mercifully <br>
+        Yes, and um, not with you, Derek, this star nonsense?<br>
+        Yes, yes<br>
+        No, it isn't<br>
+        Yeah, I am sure of it<br><br>
+        
+        So, so you think you can tell<br>
+        Heaven from hell? Blue skies from pain?<br>
+        Can you tell a green field from a cold steel rail?<br>
+        A smile from a veil? Do you think you can tell?<br> <br>
+        
+        Did they get you to trade your heroes for ghosts?<br>
+        Hot ashes for trees? Hot air for a cool breeze?<br>
+        Cold comfort for change? Did you exchange<br>
+        A walk-on part in the war for a lead role in a cage?<br><br>
+        How I wish, how I wish you were here<br>
+        We're just two lost souls swimming in a fishbowl, year after year<br>
+        Runnin' over the same old ground, what have we found?<br>
+        The same old fears, wish you were here</p>
+    <p>**Not a "poem" but still poetic</p>
+    <div class="link"> 
+        <a href="https://medium.com/@elliottdehn/wish-you-were-here-is-deeper-than-you-think-f8f2b6b88268"> standard interprentation (imo) | </a>
+        <a href="https://medium.com/@denfiszk/this-is-my-interpretation-of-pink-floyds-wish-you-were-here-ff14543678b1"> one i align most with </a>
+
+    </div>
+
+  </main>
+ 
+  <div id="footer"></div>
+</body>
+</html>

@@ -38,7 +38,7 @@ footer {
 main {
     flex: 1;
 }
-section, h1, h2, p, ul, .link {
+section, h1, h2, p, ul, .link, .center{
   margin: 1em auto;
   max-width: 700px;
   padding: 0 1em;
