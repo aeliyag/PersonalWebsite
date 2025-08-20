@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--Linked to /blog.html-->
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>blog post 3 | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('/nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main>
+      <h1> Week of August 18-24th</h1>
+      <p><b>August 19th</b></p>
+      <p> Meeting with Mike Franklin to strategize on Mentorship help and working with UChicago resources</p>
+      <p> Updaing website</p>
+      <p> Continuing exploration with rasberry pi </p>
+      <p> Am getting quite distracted by social media apps..as a result spent less time reading and reviewing poetry</p>
+      <p><b>August 18th</b></p>
+      <p> Finished roblox exam for swe 2026</p>
+      <p> Worked on moving backend into production but recieved errors - need to go back and debug</p>
+      <p> Researched proffessors working in CV</p></o>
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

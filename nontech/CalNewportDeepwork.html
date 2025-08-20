@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<!--Linked to /funfacts.html-->
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <meta charset="UTF-8" />
   <title>Deep WOrk  | My Website</title>
 </head>
@@ -9,12 +10,12 @@
   <div id="navbar"></div>
   
   <script>
-    fetch('nav.html')
+    fetch('/nav.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
-    fetch('footer.html')
+    fetch('/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;

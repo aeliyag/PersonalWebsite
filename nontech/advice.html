@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<!--Linked to /funfacts.html-->
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <meta charset="UTF-8" />
   <title>Advice | My Website</title>
 </head>
@@ -9,12 +10,12 @@
   <div id="navbar"></div>
   
   <script>
-    fetch('nav.html')
+    fetch('/nav.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
-    fetch('footer.html')
+    fetch('/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
@@ -28,8 +29,10 @@
     <p> Always strive for growth and don't stay in places that limit this</p>
     <p> Be technically and socially competent </p>
     <p> Ai is highly likely to replace shallow work, not deep work</p>
-    
-  </main>
+    <p> Hardware will always be behind software and therefore there will always be room and oportunity for development</p>
+    <p> Getting specalized in a sertain industry, knowing the ins and outs will help</p>
+    <p> Problem solving and original thinking is just as important as technical skill </p>
+</main>
 
 
 

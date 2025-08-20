@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<!--Listed on /personal_projects.html -->
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <meta charset="UTF-8" />
   <title>To be implemented | My Website</title>
 </head>
@@ -9,12 +10,12 @@
   <div id="navbar"></div>
   
   <script>
-    fetch('nav.html')
+    fetch('/nav.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
     });
-    fetch('footer.html')
+    fetch('/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
@@ -22,8 +23,6 @@
   </script>
   <main>
     <h1>Things I need to work on website related: </h1>
-    <p> - switch production to freestyle</p>
-    <p>  - structure of Html files</p>
     <p> - better way to update blog and project docs at the same time</p>
     <p> - Add more description of projects</p>
     <p> - Make design nicer so traffic flows to personal projects </p>
