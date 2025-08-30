@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>HandsIn</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h2>HandsIn</h2>
+    <p> ASL learning platoform that uses live webcam to track movements</p>
+    <div class="link">
+        <a href="https://www.handsinlearning.co/" target="_blank" > site</a>
+    </div>
+    <p>Current status (aug 4th): applying to incubators, finding and talking to mentors, working on full stack dev of MVP</p>
+    
+    <p> Focused on the business model plan of HandsIn for the ILC 100 Days Pitch comptition - Won 1st place </p>
+    <div class ="link">
+        <a href="https://drive.google.com/file/d/19wD94GbtKhN_ErQ5ZlN4vfRIpkJaG0Rt/view?usp=sharing" target="_blank" > Pitch Deck</a>
+    </div>
+        
+  </main>
+  
+
+
+
+
+
+  <div id="footer"></div>
+  
+</body>
+</html>

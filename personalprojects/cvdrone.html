@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>CV Drone Project </title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h2>CV Drone project</h2>
+    <p> Individual Project 2: CV Drone </p>
+    <div class = "link"> 
+        <img src="/personalprojects/media/IMG_0273.png" alt="drone" width = 300 height = 300>
+    </div>
+    <p>Current status (aug 4): Drone Project</p>
+    <p>MCurrent Status: Motors only turn direclty after esc calibration </p>
+    
+  
+        
+  </main>
+  
+
+
+
+
+
+  <div id="footer"></div>
+  
+</body>
+</html>

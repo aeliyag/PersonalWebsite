@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>Twisted Prison </title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h2>Twisted Prison</h2>
+    <p>A 3D Rubik’s Cube-style prison escape game where 3 players (prisoners) try to collect keys on different sides of the cube while evading the 1 warden (controlling two board pieces). The twist? The cube rotates randomly—helping or hindering either side depending on their luck and positioning.</p>
+    <div class="link">
+        <a href="https://docs.google.com/document/d/1c7QN_wLGMvJZk2w9v0ugr--30xdLcmqnAO11GNJUOMc/edit?usp=sharing" target="_blank" >Project Game Mechanics Build Journal | </a>
+        <a href="https://docs.google.com/document/d/1eWARjhWH7FZWjTjy9Irzxad_yhN0zSeXvCXgcLXLRo0/edit?usp=sharing" target="_blank" >Game Rules | </a>
+        <a href="https://www.youtube.com/watch?v=7bKREtT43zw&feature=youtu.be" target="_blank" >TUI Demo | </a>
+        <a href="https://github.com/aeliyag/TwistedPrisonTui" target="_blank" >GitHub</a>
+
+    </div>
+  
+        
+  </main>
+  
+
+
+
+
+
+  <div id="footer"></div>
+  
+</body>
+</html>
