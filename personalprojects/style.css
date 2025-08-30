@@ -1,0 +1,89 @@
+/* Timeline container */
+.timeline {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    width: 90%;
+    max-width: 900px;
+  }
+  
+  /* The vertical line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline items */
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+    text-align: left;
+  }
+  
+  /* Content box */
+  .timeline-item .content {
+    display: inline-block;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  /* Connector dots */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item.left::before {
+    right: -12px;
+  }
+  
+  .timeline-item.right::before {
+    left: -12px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 10px;
+    }
+    .timeline-item {
+      width: 100%;
+      padding-left: 2.5rem;
+      text-align: left;
+    }
+    .timeline-item.left,
+    .timeline-item.right {
+      left: 0;
+      text-align: left;
+    }
+    .timeline-item::before {
+      left: 0;
+    }
+  }

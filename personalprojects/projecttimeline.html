@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>Project Timeline | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h2>Project Timeline</h2>
+    <div class="timeline">
+  
+      <!-- Timeline Item -->
+      <div class="timeline-item left">
+        <a href="/personal_projects.html" class="card-link">
+         <div class="content card">
+         <h3>2025 – Title</h3>
+          <p>description.</p>
+            
+          </div>
+        </a>
+      </div>
+  
+      <!-- Timeline Item -->
+      <div class="timeline-item right">
+        <a href="/personal_projects.html" class="card-link">
+          <div class="content card">
+          <h3>2024 – Title</h3>
+          <p>description.</p>
+          </div>
+        </a>
+      </div>
+  
+      <!-- Timeline Item -->
+      <div class="timeline-item left">
+        <a href="/personal_projects.html" class="card-link">
+          <div class="content card">
+          <h3>2023 – Title</h3>
+          <p>Checking how long this piece of text needs to be</p>
+          </div>
+        </a>
+      </div>
+  
+    </div>
+  </main>
+  
+
+
+
+
+
+  <div id="footer"></div>
+  <script>
+    // Observe when timeline items enter viewport
+    const items = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    items.forEach(item => observer.observe(item));
+  </script>
+  
+</body>
+</html>
