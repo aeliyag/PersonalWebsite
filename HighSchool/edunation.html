@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>EduNATION </title>
+</head>
+<body>
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <main>
+    <h2>EduNATION</h2>
+    <p> B2B ecourse Service Providers</p>
+    <p>Led an eCourse customization B2B service, partnering with companies like FEA, Mindmarker, and MinervacQ. <br>
+        Developed eCourses for company onboarding and customer training. <br>
+        Managed strategic planning, team operations, and content development.</p>
+    <p> Winner of Harker's SHarker Tank 2023</p>
+    
+  
+        
+  </main>
+  
+
+
+
+
+
+  <div id="footer"></div>
+  
+</body>
+</html>
