@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Home | My Website</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/personalprojects/style.css">
 </head>
 <body>
   <!-- Navbar Include -->
@@ -47,6 +48,18 @@
    
     </a>    
     </main>
+
+    <div id="timeline"></div>
+
+    <script>
+       fetch('/personalprojects/timeline.html')
+       .then(res => res.text())
+       .then(data => {
+         document.getElementById('timeline').innerHTML = data;
+       });
+    </script>
+   
+   
 
   <!-- Footer Include -->
   <div id="footer"></div>

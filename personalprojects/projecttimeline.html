@@ -21,46 +21,16 @@
         document.getElementById('footer').innerHTML = data;
       });
   </script>
-  <main>
-    <h2>Project Timeline</h2>
-    <div class="timeline">
-  
-      <!-- Timeline Item -->
-      <div class="timeline-item left">
-        <a href="/personal_projects.html" class="card-link">
-         <div class="content card">
-         <h3>2025 Summer</h3>
-          <p>skills learned: Html, CSS, JS, full stack</p>
-          <p> Internship: Assistant project Manager at Akool</p>
-          </div>
-        </a>
-      </div>
-  
-      <!-- Timeline Item -->
-      <div class="timeline-item right">
-        <a href="/personal_projects.html" class="card-link">
-          <div class="content card">
-          <h3>1st year</h3>
-          <p>skills learned: Python, C, C++</p>
-          <p> Classes taken: CS141-143, Mathematical Foundations of machine learning</p>
-          </div>
-        </a>
-      </div>
-  
-      <!-- Timeline Item -->
-      <div class="timeline-item left">
-        <a href="/personal_projects.html" class="card-link">
-          <div class="content card">
-          <h3>High School</h3>
-          <p> skills learned: Java, Leadership</p>
-          <p>projects: FPS (Future problem Solving), EduNATION, Robotics</p>
-          </div>
-        </a>
-      </div>
-  
-    </div>
-  </main>
-  
+
+    <div id="timeline"></div>
+
+ <script>
+    fetch('/personalprojects/timeline.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('timeline').innerHTML = data;
+    });
+ </script>
 
 
 
