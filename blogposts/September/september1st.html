@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--Linked to /blog.html-->
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>blog | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('/nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main>
+    <h1>Week of September 1st</h1>
+    <p><b> September 6th</b></p>
+    <p> - website updates</p>
+    <p><b> September 5th</b></p>
+    <p> - started working on a company tracker to track yc startup ideas + founders + progress</p>
+    <p> - got results back from yc -> rejected but was noted that we were in the top 10% of applicants</p>
+    <p><b> September 3rd</b></p>
+    <p> - rasberry pi work, experimented with breadboard + camera -> able to take photos and videos</p>
+    <p> - Tried getting a livestream working, but so far not working</p>
+    <p><b> September 1st</b></p>
+    <p> - leet code practice + coding assesment for tiktok</p>
+    
+
+
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
