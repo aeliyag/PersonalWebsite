@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--Linked to /blog.html-->
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <title>blog | My Website</title>
+</head>
+<body>
+  <div id="navbar"></div>
+    
+  <script>
+    fetch('/nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
+  <main>
+    <h1>Week of September 15st</h1>
+    <p><b> September 17th</b></p>
+    <p> - starting azura certificate learning</p>
+    <p> - reviewing c for CS 144</p>
+    <p> - researching pally.com</p>
+    <p> <b>September 16th</b> </p>
+    <p> - met with Deepak Marda, Security at microsoft and cofounder of Mardamed </p>
+    <p> Importanec of having a growth mindset, using microsoft products, and pros and cons of a large company vs startup workplace enviornment</p>
+    <p> <b>September 15th</b> </p>
+    <p> - brainstorming industries and companies for next yc application</p>
+    <p> - I don't want to go into education or medicine because of long cycle times and the health industry is rough </p>
+    <p> looking at potential e commerse or ai agentic automation </p>
+    
+
+
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
