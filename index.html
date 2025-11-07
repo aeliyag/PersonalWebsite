@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/personalprojects/style.css">
 </head>
 <body>
+  <!-- Snow Falling -->
+  <canvas id="snow-canvas"></canvas>
+
   <!-- Navbar Include -->
   <div id="navbar"></div>
 
@@ -23,7 +26,7 @@
         </section>
     </a>
 
-    <a href="https://lnkd.in/gmAxXN44" class="card-link">
+    <a href="https://akool.com/apps/streaming-avatar/share/-fUX1RZt51" class="card-link">
         <section class="card">
             <h2>Akool - Streaming Avatar</h2>
             <p> click here to talk to a streaming avatar about me</p>
@@ -55,7 +58,11 @@
         </p>
         </section>
    
-    </a>    
+    </a>   
+    
+
+
+
     </main>
 
     <div id="timeline"></div>
@@ -67,6 +74,19 @@
          document.getElementById('timeline').innerHTML = data;
        });
     </script>
+
+    <div id = "contact_me"> 
+        <section class="card">
+        <h2>Subscribe to Stay Updated with My Journey</h2>
+        <form id="email-form">
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="status"></p>
+        </section>
+
+    </div>
+
    
    
 
@@ -83,5 +103,9 @@
       .then(res => res.text())
       .then(data => { document.getElementById('footer').innerHTML = data; });
   </script>
+  <script src="snow.js"></script>
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="emailList.js"></script>
+
 </body>
 </html>
