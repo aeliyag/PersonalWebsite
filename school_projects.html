@@ -1,60 +1,55 @@
 <!DOCTYPE html>
-<!--Listed on /projects.html -->
+<!-- Listed on /projects.html -->
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css" />
   <meta charset="UTF-8" />
-  <title>Projects | My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Projects | Aeliya Grover</title>
 </head>
 <body>
+  <script src="/assets/js/global.js"></script>
   <div id="navbar"></div>
-    
+
+  <main>
+    <h1>School projects</h1>
+    <p class="lead">Also see the <a href="/projects.html">filterable project grid</a> and <a href="/personalprojects/projecttimeline.html">timeline</a>.</p>
+    <p>College classes:</p>
+    <ul>
+      <li>CS 141–143</li>
+      <li>Introduction to mathematical foundations of machine learning</li>
+    </ul>
+
+    <p>High school</p>
+    <a href="/HighSchool/nlayer.html" class="card-link">
+      <section class="card">
+        <div class="link">
+          <p>Built n-layer neural network from scratch</p>
+        </div>
+      </section>
+    </a>
+    <a href="/HighSchool/compilers.html" class="card-link">
+      <section class="card">
+        <div class="link">
+          <p>Built first part of Pascal compiler</p>
+        </div>
+      </section>
+    </a>
+  </main>
+
+  <div id="footer"></div>
+
   <script>
-    fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-    });
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => {
+    fetch('/nav.html')
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+    fetch('/footer.html')
+      .then((res) => res.text())
+      .then((data) => {
         document.getElementById('footer').innerHTML = data;
       });
   </script>
-  
-  <main> 
-    <h1>School Projects</h1>
-    <p>College classes: </p>
-    <div class = "link"> 
-        <li> CS141-143</li>
-        <li> Introduction to mathematical fondations of machine learning</li>
-    </div>
-
-
-    <p> High School</p>
-    <a href="HighSchool/nlayer.html" class="card-link">
-        <section class="card">
-            <div class="link"> 
-                <p>Built n-layer neural network from scratch</p>
-        
-            </div>
-        </section>
-
-    </a>
-    <a href="HighSchool/compilers.html" class="card-link">
-        <section class="card">
-            <div class="link"> 
-                <p> Built first part of pascal compiler</p>
-        
-            </div>
-        </section>
-    </a>
-
-
-   
-
-
-  </main>
-  <div id="footer"></div>
 </body>
 </html>

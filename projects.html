@@ -1,61 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
-  <title>Projects | My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Aeliya Grover</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <script src="/assets/js/global.js"></script>
   <div id="navbar"></div>
-    
+
+  <main class="main-wide">
+    <h1>Projects</h1>
+    <p class="lead">
+      Filter by skills, search by keyword, or open the
+      <a href="/personalprojects/projecttimeline.html">full timeline</a>. Legacy detail pages stay linked from each card where available.
+    </p>
+
+    <section id="admin-bar" class="admin-bar">
+      <p id="admin-status" style="margin:0; flex:1; min-width:200px;"></p>
+      <button type="button" id="btn-sign-in">Sign in with Google</button>
+      <button type="button" id="btn-sign-out" class="secondary hidden">Sign out</button>
+      <button type="button" id="btn-add-project" class="hidden">Add project</button>
+    </section>
+
+    <div class="projects-toolbar">
+      <div class="projects-search">
+        <label for="projects-search">Search</label>
+        <input type="text" id="projects-search" placeholder="Title or description…" autocomplete="off" />
+      </div>
+    </div>
+    <p style="font-size:0.9rem; color: var(--muted); margin-top:0;">Skills — tap to filter (any match)</p>
+    <div id="skill-chips" class="skill-filters"></div>
+
+    <div id="projects-grid" class="projects-grid" style="margin-top: 1.5rem;"></div>
+  </main>
+
+  <div id="modal-backdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="project-modal">
+      <h2 id="modal-title">Add project</h2>
+      <form id="project-form">
+        <div class="form-row">
+          <label for="pf-title">Title</label>
+          <input id="pf-title" name="title" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="pf-summary">Summary</label>
+          <textarea id="pf-summary" name="summary" rows="3" required></textarea>
+        </div>
+        <div class="form-row">
+          <label for="pf-skills">Skills (comma separated)</label>
+          <input id="pf-skills" name="skills" type="text" placeholder="e.g. React, Leadership" required />
+        </div>
+        <div class="form-row">
+          <label for="pf-kind">Kind</label>
+          <select id="pf-kind" name="kind">
+            <option value="build">build</option>
+            <option value="hackathon">hackathon</option>
+            <option value="leadership">leadership</option>
+            <option value="work">work</option>
+            <option value="school">school</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="pf-period">Period (display)</label>
+          <input id="pf-period" name="period" type="text" placeholder="e.g. Winter 2026" required />
+        </div>
+        <div class="form-row">
+          <label for="pf-sort">Sort key (ISO date)</label>
+          <input id="pf-sort" name="sortKey" type="text" placeholder="2026-03-01" required />
+        </div>
+        <div class="form-row">
+          <label><input type="checkbox" id="pf-featured" name="featured" /> Featured</label>
+        </div>
+        <div class="form-row">
+          <label for="pf-repo">Repo URL</label>
+          <input id="pf-repo" name="repo" type="url" />
+        </div>
+        <div class="form-row">
+          <label for="pf-site">Site URL</label>
+          <input id="pf-site" name="site" type="url" />
+        </div>
+        <div class="form-row">
+          <label for="pf-demo">Demo URL</label>
+          <input id="pf-demo" name="demo" type="url" />
+        </div>
+        <div class="form-row">
+          <label for="pf-detail">Detail page path</label>
+          <input id="pf-detail" name="detail" type="text" placeholder="/personalprojects/..." />
+        </div>
+        <div class="modal-actions">
+          <button type="submit">Save</button>
+          <button type="button" class="secondary" id="modal-close">Cancel</button>
+          <button type="button" id="form-delete" class="secondary hidden" style="border-color: var(--danger); color: var(--danger);">
+            Delete
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
   <script>
-    fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-    });
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => {
+    fetch('/nav.html')
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+    fetch('/footer.html')
+      .then((res) => res.text())
+      .then((data) => {
         document.getElementById('footer').innerHTML = data;
       });
   </script>
-  
-  <main> 
-    <h1>Projects</h1>
-    <div>
-      <p>Where I like to spend most of my time...</p>
-    </div>
-
-    <a href="personalprojects/projecttimeline.html" class="card-link">
-        <section class="card">
-            <h2> Timeline</h2>
-            <p> Full overview!!</p>
-        </section>
-        
-    </a>
-
-    <a href="personal_projects.html" class="card-link">
-        <section class="card">
-            <h2> Personal projects</h2>
-            <p> Click here to view all</p>
-            
-        </section>
-        
-    </a>
-    <a href="school_projects.html" class="card-link">
-        <section class="card">
-            <h2> School projects</h2>
-            <p> Click here to view all</p>
-        </section>
-       
-    </a>
-
-
-
-    
-  </main>
-  <div id="footer"></div>
- 
+  <script type="module" src="/assets/js/firebaseConfig.js"></script>
+  <script type="module" src="/assets/js/projects-app.js"></script>
 </body>
 </html>

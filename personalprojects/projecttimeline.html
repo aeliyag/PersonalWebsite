@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css" />
   <meta charset="UTF-8" />
-  <title>Project Timeline | My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Timeline | Aeliya Grover</title>
 </head>
 <body>
+  <script src="/assets/js/global.js"></script>
   <div id="navbar"></div>
-  
-  <script>
-    fetch('/nav.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-    });
-    fetch('/footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
 
+  <main style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
     <div id="timeline"></div>
-
- <script>
-    fetch('/personalprojects/timeline.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('timeline').innerHTML = data;
-    });
- </script>
-
-
-
-
+  </main>
 
   <div id="footer"></div>
+
   <script>
-    // Observe when timeline items enter viewport
-    const items = document.querySelectorAll('.timeline-item');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
+    fetch('/nav.html')
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById('navbar').innerHTML = data;
       });
-    }, { threshold: 0.2 });
-  
-    items.forEach(item => observer.observe(item));
+    fetch('/footer.html')
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById('footer').innerHTML = data;
+      });
+
+    fetch('/personalprojects/timeline.html')
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById('timeline').innerHTML = data;
+        const items = document.querySelectorAll('.timeline-item');
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+          },
+          { threshold: 0.2 }
+        );
+        items.forEach((item) => observer.observe(item));
+      });
   </script>
-  
 </body>
 </html>
