@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css" />
   <meta charset="UTF-8" />
-  <title>HandsIn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hands In | Aeliya Grover</title>
 </head>
 <body>
   <div id="navbar"></div>
-  
+
+  <main>
+    <h2>Hands In</h2>
+    <p><em>I previously co‑founded Hands In but am no longer contributing to the project.</em></p>
+    <h3>Overview</h3>
+    <p>ASL learning platform that uses live webcam to track movements.</p>
+    <div class="link">
+      <p>Site: <a href="https://www.handsinlearning.co/" target="_blank" rel="noopener">handsinlearning.co</a></p>
+    </div>
+    <p>Role: co‑founder, CEO</p>
+    <p>Stack: PyTorch, MediaPipe, Vercel, Render, React.js, TensorFlow.js</p>
+    <p>Coding tools: Claude, Roo Code, ChatGPT</p>
+    <p>Languages: JS/HTML/CSS, Python</p>
+    <p>While involved, focus included product–market exploration, gathering user feedback, improving hand‑recognition, and infra (e.g. cold starts / Azure).</p>
+
+    <h3>Timeline</h3>
+    <p>This summer we shipped a simple MVP in production on our site. We also applied to YC F25—we did not get in, but received feedback that we were in roughly the top 10% of applications.</p>
+
+    <p>February–May: focused on the business plan for Hands In for the ILC 100 Days Pitch competition — won first place.</p>
+    <div class="link">
+      <a href="https://drive.google.com/file/d/19wD94GbtKhN_ErQ5ZlN4vfRIpkJaG0Rt/view?usp=sharing" target="_blank" rel="noopener">Pitch deck</a>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
   <script>
     fetch('/nav.html')
-      .then(res => res.text())
-      .then(data => {
+      .then((res) => res.text())
+      .then((data) => {
         document.getElementById('navbar').innerHTML = data;
-    });
+      });
     fetch('/footer.html')
-      .then(res => res.text())
-      .then(data => {
+      .then((res) => res.text())
+      .then((data) => {
         document.getElementById('footer').innerHTML = data;
       });
   </script>
-  <main>
-    <h2>HandsIn</h2>
-    <h3> Overview: </h3>
-    <p> ASL learning platform that uses live webcam to track movements</p>
-    <div class="link">
-        <p>Click here for our <a href="https://www.handsinlearning.co/" target="_blank" >  website</a></p>
-    </div>
-    <p> Role: co-Founder, CEO</p>
-    <p> Stack: Pytorch, mediapipe-Solutions, Vercel, Render, React.js, Tensorflow.js</p>
-    <p> Coding tools:  Claude, Roo Code, ChatGPT</p>
-    <p> Languages: JS/Html/CSS, Python</p>
-    <p> Current problems: finding product market fit - talking to end users and getting feedback, improving hand recognition model, getting rid of cold starts/switching to azure</p>
-
-    <h3> Timeline: </h3>
-    <p>This summer we made a simple MVP in production on our site. We also submitted to YC F25 - did not get in, but recieved message that we were top 10% of applications</p>
-    
-    <p>Febuary-May Focused on the business model plan of HandsIn for the ILC 100 Days Pitch comptition - Won 1st place </p>
-    <div class ="link">
-        <a href="https://drive.google.com/file/d/19wD94GbtKhN_ErQ5ZlN4vfRIpkJaG0Rt/view?usp=sharing" target="_blank" > Pitch Deck</a>
-    </div>
-        
-  </main>
-  
-
-
-
-
-
-  <div id="footer"></div>
-  
 </body>
 </html>

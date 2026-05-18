@@ -45,8 +45,9 @@ export const PROJECTS_SEED = [
   },
   {
     title: 'Akool — Assistant Project Manager internship',
-    summary: 'Summer internship: HTML, CSS, JS, full‑stack exposure, and project management.',
-    skills: ['Full‑stack', 'Project mgmt', 'Web'],
+    summary:
+      'Summer APM internship: third-party integrations (Canva, Adobe, PowerPoint), standups with engineering, UX feedback on AI video tools, competitive analysis, and tutorial content—not a software engineering / full‑stack IC role.',
+    skills: ['Project mgmt', 'Integrations', 'UX', 'Content'],
     kind: 'work',
     period: '2025 Summer',
     sortKey: '2025-08-15',
@@ -55,11 +56,12 @@ export const PROJECTS_SEED = [
   },
   {
     title: 'Hands In',
-    summary: 'Ongoing personal project.',
-    skills: ['Web', 'JavaScript'],
+    summary:
+      'ASL learning product (webcam + pose tracking); co‑founded—pitched and shipped an MVP. I have since stepped back and am no longer on the team.',
+    skills: ['Web', 'MediaPipe', 'Python', 'Product'],
     kind: 'build',
-    period: '2024–2026',
-    sortKey: '2025-06-01',
+    period: '2024–2025',
+    sortKey: '2025-08-31',
     links: { detail: '/personalprojects/handsin.html' },
     featured: false,
   },

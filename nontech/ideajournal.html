@@ -4,43 +4,49 @@
 <head>
   <link rel="stylesheet" href="/style.css">
   <meta charset="UTF-8" />
-  <title>Ideas | My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ideas | Aeliya Grover</title>
 </head>
 <body>
+  <script src="/assets/js/global.js"></script>
   <div id="navbar"></div>
-  
+
+  <main>
+    <h1>Project Idea Journal</h1>
+    <p>Let me know if you want to build any of these with me — <a href="mailto:Aeliyag@uchicago.edu">aeliyag@uchicago.edu</a>.</p>
+
+    <h2>Dev tooling / workflows</h2>
+    <p>
+      <strong>Cursor efficiency &quot;second brain&quot;:</strong> ways to optimize Cursor token usage —
+      smarter file retrieval by <em>saving</em> and <em>recalling</em> prior agent retrieval patterns (a second-brain-style layer so the IDE doesn&apos;t redundantly pull the same context every session).
+    </p>
+
+    <h2>Product ideas</h2>
+    <p>Tomeo AI — AI shopping assistant, textbook scanner that finds cheapest textbooks for students, reverse image lookup (like Pinterest but sharper), dorm-room photo → recommended product lists, etc. — looking for a business/operations partner to onboard.</p>
+    <p>FillUp — wellness / diet / exercise / sleep tracker that ties plans together for better workouts, meals, meds reminders.</p>
+    <p>UChicago grades tracker — low-friction Canvas grade tracking for the grade-tracking–inclined.</p>
+    <p>Weather-aware outfit recommender grounded in forecasts + simple fashion cues.</p>
+    <p>Browser plugin to strip Instagram reels (doom-scroll guard).</p>
+    <p>Photo-taking coach for novice iPhone photographers.</p>
+    <p>Financial visualizer for short- and long-term money picture.</p>
+    <p>ChatGPT Slack / Messages plugin.</p>
+    <p>Roommate guest check-in flow.</p>
+    <p>Task manager browser extension.</p>
+  </main>
+
+  <div id="footer"></div>
+
   <script>
     fetch('/nav.html')
-      .then(res => res.text())
-      .then(data => {
+      .then((res) => res.text())
+      .then((data) => {
         document.getElementById('navbar').innerHTML = data;
-    });
+      });
     fetch('/footer.html')
-      .then(res => res.text())
-      .then(data => {
+      .then((res) => res.text())
+      .then((data) => {
         document.getElementById('footer').innerHTML = data;
       });
   </script>
-  <main>
-    <h1>Project Idea Journal</h1>
-    <p> Let me know if you want to build any of these with me! email- aeliyag@uchicago.edu</p>
-    <p> Tomeo Ai - an ai shopping assistant, Textbook scanner that finds cheepest textbooks for students, reverse image look up (like pintrest but better), insert an image of a dorm room and get a list of reccommended products to buy, ect,ect -> looking for business/operations person to onboard for this project</p>
-    <p> FillUp- Wellness-Diet-Exercise-Sleep Tracker that tracks workout plans, diet, sleep <br/> in order to recommend beter future workout plans and diet, and give better reminders for medication</p>
-    <p> UChicago Grades Tracker - A easy way to track and update grades in Canvas for grade addictive uchicago students</p>
-    <p> Weather app that can recommend you outfits what to wear that actually match weather forcasts and help with latest fashion tips</p>
-    <p> A plug in to remove instagram reels (victim of too many doom scrolls) </p>
-    <p> Photo taking recommender app that helps guide novice iphone photographers to take better photos </p>
-    <p> Financial visualizer app to help track short and long term finances</p>
-    <p> chatgpt slack / messages plug in</p>
-    <p> Roommate guest check in thing</p>
-    <p> Task manager extention </p>
-
-  </main>
-
-
-
-
-
-  <div id="footer"></div>
 </body>
 </html>
