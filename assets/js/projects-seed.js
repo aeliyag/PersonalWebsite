@@ -46,7 +46,7 @@ export const PROJECTS_SEED = [
   {
     title: 'Akool — Assistant Project Manager internship',
     summary:
-      'Summer APM internship: third-party integrations (Canva, Adobe, PowerPoint), standups with engineering, UX feedback on AI video tools, competitive analysis, and tutorial content—not a software engineering / full‑stack IC role.',
+      'Summer APM internship: third-party integrations (Canva, Adobe, PowerPoint), standups with engineering, UX feedback on AI video tools, competitive analysis, and tutorial content.',
     skills: ['Project mgmt', 'Integrations', 'UX', 'Content'],
     kind: 'work',
     period: '2025 Summer',
