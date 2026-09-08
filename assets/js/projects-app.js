@@ -10,7 +10,7 @@ import {
   updateDoc,
 } from 'https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js';
 import { isAdminEmail } from './admin-config.js';
-import { PROJECTS_SEED } from './projects-seed.js';
+import { PROJECTS_SEED } from './projects-seed.js?v=20260908';
 
 const gridEl = document.getElementById('projects-grid');
 const searchEl = document.getElementById('projects-search');
@@ -33,6 +33,10 @@ let currentUser = null;
 let editingId = null;
 let projectsPageInited = false;
 
+function extraLinks(L) {
+  return (Array.isArray(L.extra) ? L.extra : []).filter((item) => item && item.url && item.label);
+}
+
 function normalizeLinks(p) {
   const L = p.links && typeof p.links === 'object' ? p.links : {};
   return {
@@ -40,21 +44,51 @@ function normalizeLinks(p) {
     site: p.site || L.site || '',
     demo: p.demo || L.demo || '',
     detail: p.detailUrl || L.detail || L.detailUrl || '',
+    extra: extraLinks(L),
   };
 }
 
+const SEED_TITLE_ALIASES = {
+  'akool — assistant project manager internship': 'akool — assistant technical product manager',
+};
+
+function seedTitleKey(title) {
+  const key = String(title || '').toLowerCase();
+  return SEED_TITLE_ALIASES[key] || key;
+}
+
+function isHiddenProject(p) {
+  const t = String(p?.title || '').toLowerCase();
+  return t.includes('fear elemental');
+}
+
 function mergeProjects(remoteList) {
-  const byTitle = new Map(remoteList.map((p) => [p.title.toLowerCase(), p]));
-  const merged = remoteList.map((p) => ({ ...p, _fromFirestore: true }));
+  const remoteByKey = new Map();
+  for (const p of remoteList) {
+    remoteByKey.set(seedTitleKey(p.title), p);
+  }
+
+  const usedRemote = new Set();
+  const merged = [];
 
   for (const s of PROJECTS_SEED) {
-    if (!byTitle.has(s.title.toLowerCase())) {
+    const remote = remoteByKey.get(seedTitleKey(s.title));
+    if (remote) {
+      usedRemote.add(remote);
+      merged.push({ ...s, id: remote.id, _fromFirestore: true });
+    } else {
       merged.push({ ...s, _fromSeed: true });
     }
   }
 
+  for (const p of remoteList) {
+    if (!usedRemote.has(p) && !isHiddenProject(p)) {
+      merged.push({ ...p, _fromFirestore: true });
+    }
+  }
+
   merged.sort((a, b) => String(b.sortKey || '').localeCompare(String(a.sortKey || '')));
-  return merged;
+  return merged.filter((p) => !isHiddenProject(p));
 }
 
 function collectAllSkills(projects) {
@@ -93,10 +127,15 @@ function renderProjects() {
 
     const links = normalizeLinks(p);
     const linkBits = [];
-    if (links.repo) linkBits.push(`<a href="${links.repo}" target="_blank" rel="noopener">Repo</a>`);
-    if (links.site) linkBits.push(`<a href="${links.site}" target="_blank" rel="noopener">Site</a>`);
-    if (links.demo) linkBits.push(`<a href="${links.demo}" target="_blank" rel="noopener">Demo</a>`);
-    if (links.detail) linkBits.push(`<a href="${links.detail}">Details</a>`);
+    if (links.repo) linkBits.push(`<a href="${escapeHtml(links.repo)}" target="_blank" rel="noopener">Repo</a>`);
+    if (links.site) linkBits.push(`<a href="${escapeHtml(links.site)}" target="_blank" rel="noopener">Site</a>`);
+    if (links.demo) linkBits.push(`<a href="${escapeHtml(links.demo)}" target="_blank" rel="noopener">Demo</a>`);
+    links.extra.forEach((item) => {
+      linkBits.push(
+        `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.label)}</a>`
+      );
+    });
+    if (links.detail) linkBits.push(`<a href="${window.sitePath(links.detail)}">Details</a>`);
 
     const skills = (p.skills || []).map((s) => `<span class="project-skill-tag">${escapeHtml(s)}</span>`).join('');
 

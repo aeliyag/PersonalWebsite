@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
   <meta charset="UTF-8" />
-  <title>Akool </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akool | Aeliya Grover</title>
 </head>
 <body>
+  <script src="../assets/js/global.js"></script>
   <div id="navbar"></div>
-  
+
   <script>
-    fetch('/nav.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-    });
-    fetch('/footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
+    loadPartial('/nav.html', 'navbar');
+    loadPartial('/footer.html', 'footer');
   </script>
   <main>
     <h2>Akool</h2>
-    <p> Role: Assistant Project Manager</p>
-    <p> This summmer I interned with <a href="https://akool.com/landing" target="_blank">Akool</a>, recently named <a href="https://www.inc.com/inc5000/2025"  target="_blank">#1 on the Inc 5000</a> </p>
-    
-    <h3> Projects worked on:</h3>
-    <li>Led standups for a India team of three engineers to plan, scope, andexecute third party application integrations with Canva, Adobe, and Powerpoint 
-        for Akool's content creation tools. Tested the integrations and provided iterative feedback
-  </li>
-    <li>Prepared competitive analysiss documents to inform production feature prioiritzation </li>
-    <li>Contributed to the homepage landimg Akool by crafting engaging title options and improving call-to-action effectiveness to enhance user engagement and brand messaging.</li>
-    <li>Created documents outlining feedback to improve user experience of Akool's Video Gen Ai platform</li>
-    <li>Collaborated with engineering and design teams to define requirements and sucess metrics fro theImage-to-video (12V) feature. Prepared materials for glass cutting video generation contest resulting in 2K+ submissions over a two week time period</li>
-    <li> Independently developed user resources, including 10 tutorial videos for tools resulting in over 600K+ views</li>
-    <a href = "https://youtube.com/playlist?list=PLrXirQUIC8wzAs2T3W7nKejYLm5okOrMY&si=2xl3JejSJO-WwR3o" target="_blank">Link to playlist</a>
-    <a href ="https://www.linkedin.com/posts/akool_akool-ai-videotools-activity-7369057865161953284-oqfb?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADNyFBMBLm5seFdhpiZdLeukKYzWZUOvVQs" target="_blank"> akool linkedin post </a>
-</main>
-  
+    <p>Role: Assistant Technical Product Manager</p>
+    <p>
+      Two summers with
+      <a href="https://akool.com/" target="_blank" rel="noopener">Akool</a>,
+      named
+      <a href="https://www.inc.com/inc5000/2025" target="_blank" rel="noopener">#1 on the Inc 5000</a>
+      in 2025. Worked closely with engineering and product.
+    </p>
 
+    <h3>Summer 2026</h3>
+    <ul>
+      <li>Owned end-to-end implementation of Agentic Canvas / Canva features, including AI style generation, prompt refinement, canvas navigation, and node cleanup.</li>
+      <li>Created the Artist in Residence program: recruited three creators, hosted seven events for 60+ attendees, and worked with them on AI short-drama, realism, and marketing workflows to improve the product. Helped one creator grow from 2K to 39.7K views.</li>
+      <li>Ran competitive research across AI swapping, agentic workflows, and new-user onboarding, and led four team-wide product strategy reviews.</li>
+      <li>Built a React + TypeScript video editor (timeline editing, trimming, overlays, uploads, generative AI) so tutorial production was faster, then embedded new tutorials into the product. Videos from the editor have 625K+ public YouTube views.</li>
+    </ul>
+    <p>
+      <a href="/blogposts/summer/summer-2026.html">Summer 2026 recap</a>
+    </p>
 
-
-
+    <h3>Summer 2025</h3>
+    <ul>
+      <li>Coordinated engineering across India and Shanghai for Canva, Adobe, and PowerPoint integrations; tested the integrations and gave iterative feedback.</li>
+      <li>Prepared competitive-analysis documents to inform feature prioritization.</li>
+      <li>Contributed homepage copy and call-to-action options to improve engagement.</li>
+      <li>Wrote UX feedback for Akool’s video-generation tools.</li>
+      <li>Partnered with engineering and design on requirements and success metrics for image-to-video; supported a generative-video challenge that drew 2K+ submissions in two weeks.</li>
+      <li>Produced tutorial videos for Akool’s tools (same playlist below).</li>
+    </ul>
+    <p>
+      <a href="https://youtube.com/playlist?list=PLrXirQUIC8wzAs2T3W7nKejYLm5okOrMY" target="_blank" rel="noopener">Tutorial playlist</a>
+      ·
+      <a href="https://www.linkedin.com/posts/akool_akool-ai-videotools-activity-7369057865161953284-oqfb" target="_blank" rel="noopener">Akool LinkedIn post</a>
+    </p>
+  </main>
 
   <div id="footer"></div>
-  
 </body>
 </html>

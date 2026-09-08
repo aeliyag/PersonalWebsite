@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toova | Aeliya Grover</title>
+</head>
+<body>
+  <script src="../assets/js/global.js"></script>
+  <div id="navbar"></div>
+
+  <script>
+    loadPartial('/nav.html', 'navbar');
+    loadPartial('/footer.html', 'footer');
+  </script>
+  <main>
+    <h2>Toova</h2>
+    <p>Role: Co-founder, full-stack engineer</p>
+    <p>
+      <a href="https://toova.net" target="_blank" rel="noopener">toova.net</a>
+      — a 3D dorm-room visualizer that turns 2D photos into interactive 3D spaces so students can plan furniture and layouts before they buy.
+    </p>
+
+    <h3>What I built</h3>
+    <ul>
+      <li>2D→3D pipeline using TripleSR and Pixel3D, integrated end-to-end into the product.</li>
+      <li>GPU inference on AWS EC2 with Docker, plus Lambda-based server orchestration.</li>
+      <li>SQL backend for rooms, furniture, and spatial layouts so users can save and revisit setups.</li>
+    </ul>
+
+    <h3>Product</h3>
+    <ul>
+      <li>30+ customer-discovery interviews; started with textbook price comparison, then pivoted to dorm visualization based on what students actually needed.</li>
+      <li>Recruited five design partners and turned their feedback into feature priorities.</li>
+      <li>Summer 2026: more visualizer features and the first 40 users (at least one room created).</li>
+    </ul>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>

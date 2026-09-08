@@ -27,14 +27,6 @@ const ROOT = [
     preview: 'PDF résumé — download or open in a new tab.',
   },
   {
-    id: 'toova-recap',
-    type: 'file',
-    icon: '📝',
-    label: 'toova-winter-recap.pdf',
-    href: '/assets/docs/toova-winter-quarter-recap.pdf',
-    preview: 'Winter quarter recap for Toova.',
-  },
-  {
     id: 'blog',
     type: 'folder',
     icon: '✍️',
@@ -91,7 +83,7 @@ function initExplorer() {
       previewLink.href = item.href;
       previewLink.textContent = 'Jump to section';
     } else {
-      previewLink.href = item.href;
+      previewLink.href = window.sitePath(item.href);
       previewLink.textContent = item.type === 'file' ? 'Open' : 'Enter';
     }
   }
@@ -113,7 +105,7 @@ function initExplorer() {
         target?.scrollIntoView({ behavior: 'smooth' });
         return;
       }
-      window.location.href = item.href;
+      window.location.href = window.sitePath(item.href);
     };
 
     el.addEventListener('click', open);
