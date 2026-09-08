@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../../style.css">
   <meta charset="UTF-8" />
   <title>Retro Boommin'</title>
 </head>
 <body>
+  <script src="../../assets/js/global.js"></script>
   <div id="navbar"></div>
   
   <script>
-    fetch('/nav.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-    });
-    fetch('/footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
+    loadPartial('/nav.html', 'navbar');
+    loadPartial('/footer.html', 'footer');
   </script>
   <main>
     <h2>Retro Boomin'</h2>
 
     <p> Team project 2: Retro Boomin</p>
-    <p> retro-style mini-games with Pygame connected to breadboard joystick - Won Best in Track at Uncommon Hacks </p>
+    <p>Virtual retro arcade with a custom breadboard controller — Best in Trek (Hardware) at Uncommon Hacks 2025. Led game design and implemented two of five games.</p>
     <div class ="link"> 
         <a href="https://devpost.com/software/retro-boomin-9przm2" target="_blank" > Devpost</a>
     </div>

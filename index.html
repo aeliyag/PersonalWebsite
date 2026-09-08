@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aeliya Grover | Portfolio</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <canvas id="snow-canvas" aria-hidden="true"></canvas>
@@ -54,37 +54,26 @@
 
   <div id="footer"></div>
 
-  <script src="/assets/js/global.js"></script>
+  <script src="assets/js/global.js?v=20260908"></script>
   <script>
-    fetch('/nav.html')
-      .then((res) => res.text())
-      .then((data) => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-    fetch('/footer.html')
-      .then((res) => res.text())
-      .then((data) => {
-        document.getElementById('footer').innerHTML = data;
-      });
-    fetch('/personalprojects/timeline.html')
-      .then((res) => res.text())
-      .then((data) => {
-        document.getElementById('timeline').innerHTML = data;
-        const items = document.querySelectorAll('#timeline .timeline-item');
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) entry.target.classList.add('show');
-            });
-          },
-          { threshold: 0.15 }
-        );
-        items.forEach((item) => observer.observe(item));
-      });
+    loadPartial('/nav.html', 'navbar');
+    loadPartial('/footer.html', 'footer');
+    loadPartial('/personalprojects/timeline.html', 'timeline').then(() => {
+      const items = document.querySelectorAll('#timeline .timeline-item');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add('show');
+          });
+        },
+        { threshold: 0.15 }
+      );
+      items.forEach((item) => observer.observe(item));
+    });
   </script>
-  <script src="/snow.js"></script>
-  <script type="module" src="/assets/js/firebaseConfig.js"></script>
-  <script type="module" src="/assets/js/emailList.js"></script>
-  <script src="/assets/js/explorer.js"></script>
+  <script src="snow.js"></script>
+  <script type="module" src="assets/js/firebaseConfig.js"></script>
+  <script type="module" src="assets/js/emailList.js"></script>
+  <script src="assets/js/explorer.js"></script>
 </body>
 </html>
